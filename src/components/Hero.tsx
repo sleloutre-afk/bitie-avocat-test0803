@@ -2,7 +2,7 @@ import { MonogramAKB } from './Navbar'
 
 export default function Hero() {
   return (
-    <section style={{ position: 'relative', height: '100vh', minHeight: '640px', overflow: 'hidden', background: '#111010' }}>
+    <section style={{ position: 'relative', height: '100vh', minHeight: '640px', overflow: 'hidden', background: '#141820' }}>
 
       <div className="hero-img" style={{ position: 'absolute', inset: '-10%', width: '120%', height: '120%' }}>
         {/* eslint-disable-next-line @next/next/no-img-element */}
@@ -11,46 +11,46 @@ export default function Hero() {
 
       <div style={{
         position: 'absolute', inset: 0,
-        background: 'linear-gradient(to right, rgba(17,16,16,0.96) 0%, rgba(17,16,16,0.78) 55%, rgba(17,16,16,0.48) 100%)',
+        background: 'linear-gradient(to right, rgba(20,24,32,0.96) 0%, rgba(20,24,32,0.78) 55%, rgba(20,24,32,0.48) 100%)',
       }} />
 
       <div className="max-w-6xl mx-auto px-6" style={{ position: 'relative', height: '100%', display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
         <div style={{ maxWidth: '580px', paddingTop: '72px' }}>
 
           <div className="flex items-center gap-3" style={{ marginBottom: '2.5rem' }}>
-            <div style={{ width: '32px', height: '1px', background: '#c08a40' }} />
-            <span style={{ fontSize: '0.58rem', letterSpacing: '0.30em', color: 'rgba(241,237,229,0.60)', textTransform: 'uppercase' }}>
-              Avocat — Étrangers · Travail · Commercial — Barreau de Bordeaux
+            <div style={{ width: '32px', height: '1px', background: '#5a7a96' }} />
+            <span style={{ fontSize: '0.58rem', letterSpacing: '0.30em', color: 'rgba(243,244,246,0.60)', textTransform: 'uppercase' }}>
+              Avocat — Barreau de Bordeaux et du Burkina Faso
             </span>
           </div>
 
           <div style={{ display: 'flex', alignItems: 'center', gap: '1.8rem', margin: '0 0 1.5rem' }}>
-            <MonogramAKB color="rgba(241,237,229,0.75)" size={108} />
+            <MonogramAKB color="rgba(243,244,246,0.75)" size={108} />
             <h1 style={{
               fontFamily: 'var(--font-playfair)',
               fontSize: 'clamp(2.4rem, 5vw, 3.8rem)',
-              fontWeight: 400, color: '#f1ede5',
+              fontWeight: 400, color: '#f3f4f6',
               lineHeight: 1.12, margin: 0,
               letterSpacing: '-0.01em',
             }}>
               Maître<br />
               Abdoul Kader<br />
-              <em style={{ color: '#c08a40', fontStyle: 'italic' }}>Bitie</em>
+              <em style={{ color: '#5a7a96', fontStyle: 'italic' }}>Bitie</em>
             </h1>
           </div>
 
-          <p style={{ fontSize: '0.85rem', color: 'rgba(241,237,229,0.55)', lineHeight: 1.70, margin: '0 0 0.75rem' }}>
-            Droit des étrangers · Droit du travail · Droit commercial<br />
-            Droit des assurances · Droit fiscal
+          <p style={{ fontSize: '0.85rem', color: 'rgba(243,244,246,0.55)', lineHeight: 1.70, margin: '0 0 0.75rem' }}>
+            Droit des affaires et fiscalité · Droit des successions<br />
+            Droit public des affaires · Droit de la construction · Droit minier
           </p>
-          <p style={{ fontSize: '0.72rem', color: 'rgba(241,237,229,0.30)', letterSpacing: '0.06em', margin: '0 0 3rem' }}>
+          <p style={{ fontSize: '0.72rem', color: 'rgba(243,244,246,0.30)', letterSpacing: '0.06em', margin: '0 0 3rem' }}>
             Cabinet situé au cœur de Bordeaux — 37 rue Colonel Grandier-Vazeille
           </p>
 
           <div className="flex flex-wrap gap-4">
-            <a href="tel:+33627839153" style={{
+            <a href="tel:+33614573726" style={{
               display: 'inline-flex', alignItems: 'center', gap: '0.55rem',
-              background: '#c08a40', color: '#f1ede5',
+              background: '#5a7a96', color: '#f3f4f6',
               textDecoration: 'none', fontSize: '0.70rem',
               letterSpacing: '0.14em', textTransform: 'uppercase',
               padding: '1rem 2.2rem',
@@ -62,7 +62,7 @@ export default function Hero() {
             </a>
             <a href="#contact" style={{
               display: 'inline-flex', alignItems: 'center',
-              border: '1px solid rgba(241,237,229,0.25)', color: 'rgba(241,237,229,0.70)',
+              border: '1px solid rgba(243,244,246,0.25)', color: 'rgba(243,244,246,0.70)',
               textDecoration: 'none', fontSize: '0.70rem',
               letterSpacing: '0.14em', textTransform: 'uppercase',
               padding: '1rem 2.2rem',
@@ -75,7 +75,7 @@ export default function Hero() {
       </div>
 
       <div style={{ position: 'absolute', bottom: '2.5rem', left: '50%', transform: 'translateX(-50%)' }}>
-        <div style={{ width: '1px', height: '48px', background: 'linear-gradient(to bottom, rgba(192,138,64,0.60), transparent)' }} />
+        <div style={{ width: '1px', height: '48px', background: 'linear-gradient(to bottom, rgba(90,122,150,0.60), transparent)' }} />
       </div>
 
     </section>

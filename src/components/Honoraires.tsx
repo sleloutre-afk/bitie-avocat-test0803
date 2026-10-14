@@ -1,3 +1,5 @@
+'use client'
+
 const modes = [
   {
     titre: 'Convention d\'honoraires',
@@ -11,54 +13,52 @@ const modes = [
     titre: 'Honoraire forfaitaire',
     texte: "Des forfaits sont proposés pour certaines prestations délimitées : demande de titre de séjour, recours contre une OQTF, rédaction de contrat commercial ou consultation juridique initiale. Le montant est fixé à l'avance et ne varie pas en fonction du temps effectivement consacré.",
   },
-  {
-    titre: 'Aide juridictionnelle',
-    texte: "Le cabinet accepte les missions au titre de l'aide juridictionnelle totale et partielle dans tous ses domaines d'intervention. L'éligibilité dépend des ressources du demandeur. La demande s'effectue auprès du bureau d'aide juridictionnelle compétent avant l'engagement de toute diligence.",
-  },
 ]
 
 export default function Honoraires() {
   return (
-    <section id="honoraires" style={{ background: '#2e2b28', padding: '7rem 0' }}>
+    <section id="honoraires" style={{ background: '#252b35', padding: '7rem 0' }}>
       <div className="max-w-6xl mx-auto px-6">
 
         <div className="grid-2col" style={{ gap: '5rem', alignItems: 'start' }}>
 
           <div>
             <div className="flex items-center gap-3" style={{ marginBottom: '1.5rem' }}>
-              <div style={{ width: '28px', height: '1px', background: '#c08a40' }} />
-              <span style={{ fontSize: '0.58rem', letterSpacing: '0.25em', color: '#c08a40', textTransform: 'uppercase' }}>Honoraires</span>
+              <div style={{ width: '28px', height: '1px', background: '#5a7a96' }} />
+              <span style={{ fontSize: '0.58rem', letterSpacing: '0.25em', color: '#5a7a96', textTransform: 'uppercase' }}>Honoraires</span>
             </div>
 
             <h2 style={{
               fontFamily: 'var(--font-playfair)',
               fontSize: 'clamp(1.7rem, 3vw, 2.4rem)',
-              fontWeight: 400, color: '#f1ede5',
+              fontWeight: 400, color: '#f3f4f6',
               margin: '0 0 2rem', lineHeight: 1.18,
             }}>
               Transparence<br />
-              <em style={{ color: '#c08a40', fontStyle: 'italic' }}>dès le premier contact</em>
+              <em style={{ color: '#5a7a96', fontStyle: 'italic' }}>dès le premier contact</em>
             </h2>
 
-            <p style={{ fontSize: '0.88rem', color: 'rgba(241,237,229,0.60)', lineHeight: 1.80, margin: '0 0 1.2rem' }}>
+            <p style={{ fontSize: '0.88rem', color: 'rgba(243,244,246,0.60)', lineHeight: 1.80, margin: '0 0 1.2rem' }}>
               Les honoraires sont librement fixés en accord avec le client, en fonction de la nature du dossier, de sa complexité et du temps à y consacrer. Maître Bitie s&apos;engage à une information claire et préalable sur les coûts prévisibles.
             </p>
-            <p style={{ fontSize: '0.88rem', color: 'rgba(241,237,229,0.60)', lineHeight: 1.80, margin: 0 }}>
+            <p style={{ fontSize: '0.88rem', color: 'rgba(243,244,246,0.60)', lineHeight: 1.80, margin: 0 }}>
               Une provision sur honoraires peut être demandée en début de mission. Des facilités de paiement peuvent être accordées selon les situations.
             </p>
 
             <div style={{ marginTop: '2.5rem' }}>
-              <a href="tel:+33627839153" style={{
-                display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
-                background: '#c08a40', color: '#f1ede5',
-                padding: '1rem 2.2rem', textDecoration: 'none',
-                fontSize: '0.70rem', letterSpacing: '0.14em', textTransform: 'uppercase',
-              }}>
+              <button
+                onClick={() => window.dispatchEvent(new CustomEvent('open-contact-modal'))}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '0.6rem',
+                  background: '#5a7a96', color: '#f3f4f6',
+                  padding: '1rem 2.2rem', border: 'none', cursor: 'pointer',
+                  fontSize: '0.70rem', letterSpacing: '0.14em', textTransform: 'uppercase',
+                }}>
                 Demander un devis
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.58 3.4 2 2 0 0 1 3.55 1h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.66a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+                  <path d="M5 12h14M12 5l7 7-7 7"/>
                 </svg>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -66,21 +66,21 @@ export default function Honoraires() {
             {modes.map((m, i) => (
               <div key={i} style={{
                 padding: '1.8rem 0',
-                borderBottom: i < modes.length - 1 ? '1px solid rgba(241,237,229,0.07)' : 'none',
+                borderBottom: i < modes.length - 1 ? '1px solid rgba(243,244,246,0.07)' : 'none',
               }}>
                 <div style={{ display: 'flex', alignItems: 'flex-start', gap: '1.2rem' }}>
                   <div style={{
                     fontFamily: 'var(--font-playfair)', fontSize: '1.2rem',
-                    color: 'rgba(192,138,64,0.40)', lineHeight: 1, flexShrink: 0,
+                    color: 'rgba(90,122,150,0.40)', lineHeight: 1, flexShrink: 0,
                     minWidth: '1.5rem', fontStyle: 'italic',
                   }}>
                     {i + 1}
                   </div>
                   <div>
-                    <div style={{ fontSize: '0.72rem', letterSpacing: '0.10em', color: '#c08a40', textTransform: 'uppercase', marginBottom: '0.6rem' }}>
+                    <div style={{ fontSize: '0.72rem', letterSpacing: '0.10em', color: '#5a7a96', textTransform: 'uppercase', marginBottom: '0.6rem' }}>
                       {m.titre}
                     </div>
-                    <p style={{ fontSize: '0.82rem', color: 'rgba(241,237,229,0.55)', lineHeight: 1.75, margin: 0 }}>
+                    <p style={{ fontSize: '0.82rem', color: 'rgba(243,244,246,0.55)', lineHeight: 1.75, margin: 0 }}>
                       {m.texte}
                     </p>
                   </div>

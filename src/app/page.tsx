@@ -7,12 +7,14 @@ import Honoraires from '@/components/Honoraires'
 import Ressources from '@/components/Ressources'
 import Contact from '@/components/Contact'
 import Footer from '@/components/Footer'
+import FloatingCTA from '@/components/FloatingCTA'
 
 export default function Home() {
   return (
     <>
       <Hero /><StatsBar /><Cabinet /><Domaines /><Citation />
       <Honoraires /><Ressources /><Contact /><Footer />
+      <FloatingCTA />
     </>
   )
 }

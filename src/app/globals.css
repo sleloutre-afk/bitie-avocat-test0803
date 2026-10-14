@@ -1,19 +1,48 @@
 @import "tailwindcss";
 
 @theme {
-  --color-graphite: #2e2b28;
-  --color-graphite-dark: #1e1c1a;
-  --color-graphite-deep: #111010;
-  --color-ocre: #c08a40;
-  --color-ocre-light: #d4a055;
-  --color-ocre-dark: #9a6a28;
-  --color-fond: #f1ede5;
-  --color-muted: #686460;
-  --color-divider: #ccc5ba;
-  --color-creme: #e4ddd4;
+  --color-fonce: #252b35;
+  --color-fonce-dark: #141820;
+  --color-accent: #5a7a96;
+  --color-accent-light: #7a9ab6;
+  --color-accent-dark: #3a5a76;
+  --color-fond: #f3f4f6;
+  --color-creme: #e6e9ed;
+  --color-muted: #788090;
+  --color-divider: #ced3da;
 }
 
-.ressource-card:hover { border-color: rgba(192,138,64,0.40) !important; }
+.ressource-card:hover { border-color: rgba(90,122,150,0.40) !important; }
+
+.nav-link {
+  position: relative;
+  transition: color 0.25s ease;
+}
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: currentColor;
+  transition: width 0.25s ease;
+}
+.nav-link:hover::after { width: 100%; }
+
+.domaine-card {
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease, background 0.25s ease;
+}
+.domaine-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 16px 40px rgba(37,43,53,0.13);
+  border-color: #5a7a96 !important;
+  background: #fff !important;
+}
+.domaine-card:hover img {
+  opacity: 1 !important;
+  filter: none !important;
+}
 
 @keyframes kenburns {
   0%   { transform: scale(1.0) translate(0, 0); }
@@ -39,10 +68,10 @@
   .grid-footer     { grid-template-columns: 1.5fr 1fr 1fr; }
 }
 
-.stat-sep { border-right: 1px solid rgba(241,237,229,0.07); }
+.stat-sep { border-right: 1px solid rgba(243,244,246,0.07); }
 @media (max-width: 767px) {
-  .stat-sep { border-right: none; border-bottom: 1px solid rgba(241,237,229,0.07); }
+  .stat-sep { border-right: none; border-bottom: 1px solid rgba(243,244,246,0.07); }
 }
 
 .article-body p { font-size: 0.88rem; line-height: 1.85; color: #3a3530; margin-bottom: 1.2rem; }
-.article-body h2 { font-family: var(--font-playfair); font-size: 1.15rem; font-weight: 400; color: #2e2b28; margin: 2rem 0 0.8rem; }
+.article-body h2 { font-family: var(--font-playfair); font-size: 1.15rem; font-weight: 400; color: #252b35; margin: 2rem 0 0.8rem; }
